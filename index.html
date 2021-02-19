@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Převodník měn</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+</head>
+<body>
+  <div class="content-window" style="top:9.5%;left:30%;">
+    <div class="conversion-input">
+      <button class="swapButton" type="button" onclick="swapCurrencies();"></button><br>
+      <label>Convert the amount of </label>
+      <input style="width:100px;" type="text" id="amount" name="amount">
+      <select name="currency1" id="currency1">
+        <option value="CZK">(CZK) Czech koruna</option>
+        <option value="EUR">(EUR) Euro</option>
+        <option value="USD">(USD) United States dollar</option>
+        <option value="AUD">(AUD) Australian dollar</option>
+        <option value="BRL">(BRL) Brazilian real</option>
+        <option value="CAD">(CAD) Canadian dollar</option>
+        <option value="CNY">(CNY) Renminbi</option>
+        <option value="GBP">(GBP) Pound sterling</option>
+        <option value="HRK">(HRK) Croatian kuna</option>
+        <option value="HUF">(HUF) Hungarian forint</option>
+        <option value="CHF">(CHF) Swiss franc</option>
+        <option value="INR">(INR) Indian rupee</option>
+        <option value="JPY">(JPY) Japanese yen</option>
+        <option value="MXN">(MXN) Mexican peso</option>
+        <option value="PLN">(PLN) Polish złoty</option>
+        <option value="RON">(RON) Romanian leu</option>
+        <option value="RUB">(RUB) Russian ruble</option>
+        <option value="SEK">(SEK) Swedish krona</option>
+        <option value="TRY">(TRY) Turkish lira</option>
+        <option value="UAH">(UAH) Ukrainian hryvnia</option>
+      </select> to
+      <select name="currency2" id="currency2">
+        <option value="CZK">(CZK) Czech koruna</option>
+        <option value="EUR">(EUR) Euro</option>
+        <option value="USD">(USD) United States dollar</option>
+        <option value="AUD">(AUD) Australian dollar</option>
+        <option value="BRL">(BRL) Brazilian real</option>
+        <option value="CAD">(CAD) Canadian dollar</option>
+        <option value="CNY">(CNY) Renminbi</option>
+        <option value="GBP">(GBP) Pound sterling</option>
+        <option value="HRK">(HRK) Croatian kuna</option>
+        <option value="HUF">(HUF) Hungarian forint</option>
+        <option value="CHF">(CHF) Swiss franc</option>
+        <option value="INR">(INR) Indian rupee</option>
+        <option value="JPY">(JPY) Japanese yen</option>
+        <option value="MXN">(MXN) Mexican peso</option>
+        <option value="PLN">(PLN) Polish złoty</option>
+        <option value="RON">(RON) Romanian leu</option>
+        <option value="RUB">(RUB) Russian ruble</option>
+        <option value="SEK">(SEK) Swedish krona</option>
+        <option value="TRY">(TRY) Turkish lira</option>
+        <option value="UAH">(UAH) Ukrainian hryvnia</option>
+        </select>
+        <button class="equalsButton" type="button" onclick="convert();"></button>
+    </div>
+
+    <div class="conversion-date">
+      <label class="radio">
+        <input class="date-item" type="radio" name="daterb" onclick="dateSwitch();" id="today" checked>
+        Today
+      </label>
+      <label class="radio">
+        <input class="date-item" type="radio" name="daterb" onclick="dateSwitch();" id="nottoday">
+        Selected date
+      </label>
+      <input class="date-item" style="width:175px;" type="text" id="selectedDate" placeholder="Format: DD.MM.YYYY" disabled>
+    </div>
+  </div>
+
+  <div class="content-window" style="top:34%;left:34%;">
+    <div class="conversion-result" id="result-window"></div>
+  </div>
+
+  <div class="content-window" style="top:42%;left:5%;">
+    <div class="graph" id="result-window2"><canvas id="line-chart"></canvas></div>
+  </div>
+
+  <div class="content-window" style="top:42%;left:62%;">
+    <div class="table" id="result-window4">
+      <div class="values-header" style="font-weight: bold;"></div>
+      <div class="generated-values"></div>
+    </div>
+  </div>
+
+  <div class="content-window" style="top:65%;left:60.5%;">
+    <div class="table" id="result-window3">
+      <p class="table-header">Analysis of the currency rates for the past week</p>
+        Lowest: <div class="low-point"></div>
+        Highest: <div class="high-point"></div>
+        Average: <div class="average-point"></div>
+        Summary: <div class="evaulation"></div>
+    </div>
+  </div>
+    
+    <script src="script.js"></script>
+
+</body>
+</html> 

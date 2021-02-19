@@ -1,0 +1,77 @@
+body {
+    background-color: darkblue;
+  }
+
+.content-window{
+    background-color: aqua;
+    border-radius: 8px;
+    position: absolute;
+    width: auto;
+    height: auto;
+}
+
+.equalsButton{
+    background-image: url("images/equals.png");
+    background-color: aqua;
+    border-width: 0px;
+    background-repeat: no-repeat;
+    width: 74px;
+    height: 73px;
+    margin-left: 5px;
+}
+
+.swapButton{
+    margin-left: 365px;
+    margin-bottom: -10px;
+    background-image: url("images/swap.png");
+    background-color: aqua;
+    border-width: 0px;
+    background-repeat: no-repeat;
+    width: 74px;
+    height: 73px;
+}
+
+.conversion-input{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.conversion-date{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.date-item{
+    margin-left: 30px;
+}
+
+.conversion-result{
+    font-weight: bold;
+    font-size: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.graph{
+    width:1000px;
+    height:500px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: none;
+}
+
+.table{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: none;
+}
+
+.table-header{
+    font-weight: bold;
+}
